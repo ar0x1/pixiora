@@ -1,8 +1,8 @@
-&#x20;\<div align="center">
+<div align="center">
 
-\<img src="banner.png" width="100%" alt="PIXIORA — by ar0x"/>
+<img src="banner.png" width="100%" alt="PIXIORA — by ar0x"/>
 
-\<br/>
+<br/>
 
 ### A better way to handle images.
 
@@ -10,22 +10,27 @@
 
 A privacy-first image optimization studio that works entirely in your browser.
 
-\<br/>
+<br/>
 
-\<a href="[https://pixiora.netlify.app](https://pixiora.netlify.app)">   \<img src="[https://img.shields.io/badge/EXPLORE_PIXIORA-5B9CF8?style=for-the-badge&logo=googlechrome&logoColor=white](https://img.shields.io/badge/EXPLORE_PIXIORA-5B9CF8?style=for-the-badge\&logo=googlechrome\&logoColor=white)" alt="Explore PIXIORA"/> \</a> \<a href="[https://github.com/ar0x1/pixiora](https://github.com/ar0x1/pixiora)">   \<img src="[https://img.shields.io/badge/VIEW_SOURCE-18181B?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/VIEW_SOURCE-18181B?style=for-the-badge\&logo=github\&logoColor=white)" alt="View source"/> \</a>
+<a href="https://pixiora.netlify.app">
+  <img src="https://img.shields.io/badge/EXPLORE_PIXIORA-5B9CF8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Explore PIXIORA"/>
+</a>
+<a href="https://github.com/ar0x1/pixiora">
+  <img src="https://img.shields.io/badge/VIEW_SOURCE-18181B?style=for-the-badge&logo=github&logoColor=white" alt="View source"/>
+</a>
 
-\<br/>\<br/>
+<br/><br/>
 
+![GitHub stars](https://img.shields.io/github/stars/ar0x1/pixiora?style=flat-square&color=5B9CF8)
+![GitHub forks](https://img.shields.io/github/forks/ar0x1/pixiora?style=flat-square&color=5B9CF8)
+![GitHub issues](https://img.shields.io/github/issues/ar0x1/pixiora?style=flat-square&color=5B9CF8)
+![GitHub last commit](https://img.shields.io/github/last-commit/ar0x1/pixiora?style=flat-square&color=5B9CF8)
 
-
-\
-
-
-\<br/>
+<br/>
 
 *Built with precision. Designed for simplicity.*
 
-\</div>
+</div>
 
 ---
 
@@ -41,9 +46,9 @@ No unnecessary complexity. Just your image and the tools to optimize it.
 
 ## What makes it different
 
-\<table>
-\<tr>
-\<td width="50%" valign="top">
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ### 01 — Compression
 
@@ -54,8 +59,8 @@ Reduce image file sizes while retaining useful visual quality.
 - Real size and savings statistics
 - Output verification
 
-\</td>
-\<td width="50%" valign="top">
+</td>
+<td width="50%" valign="top">
 
 ### 02 — Conversion
 
@@ -66,10 +71,10 @@ Move between supported image formats with clear capability handling.
 - Conversion compatibility matrix
 - Warnings for capability changes
 
-\</td>
-\</tr>
-\<tr>
-\<td width="50%" valign="top">
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### 03 — Visual comparison
 
@@ -80,8 +85,8 @@ See exactly what changed after compression.
 - Mouse and touch interaction
 - Keyboard accessibility
 
-\</td>
-\<td width="50%" valign="top">
+</td>
+<td width="50%" valign="top">
 
 ### 04 — Privacy by design
 
@@ -92,24 +97,24 @@ Your images stay in your browser throughout processing.
 - No image uploads
 - No image storage or analytics
 
-\</td>
-\</tr>
-\</table>
+</td>
+</tr>
+</table>
 
 ## Supported formats
 
 PIXIORA supports a range of image formats, with conversion availability depending on the source, destination and browser capabilities.
 
-| Format      | Import | Export | Notes                                |
-| :---------- | :----: | :----: | :----------------------------------- |
-| JPEG        |    ✓   |    ✓   | Lossy compression                    |
-| PNG         |    ✓   |    ✓   | Lossless optimization                |
-| WebP        |    ✓   |    ✓   | Lossy and lossless                   |
-| AVIF        |    ✓   |    ✓   | Modern image encoding                |
-| GIF         |    ✓   |    ✓   | Animated GIF support                 |
-| SVG         |    ✓   |    ✓   | Sanitized vector processing          |
-| HEIC / HEIF |    ✓   |    —   | Decode only                          |
-| TIFF        |    ✓   |    —   | Decode only; partial variant support |
+| Format | Import | Export | Notes |
+|:--|:--:|:--:|:--|
+| JPEG | ✓ | ✓ | Lossy compression |
+| PNG | ✓ | ✓ | Lossless optimization |
+| WebP | ✓ | ✓ | Lossy and lossless |
+| AVIF | ✓ | ✓ | Modern image encoding |
+| GIF | ✓ | ✓ | Animated GIF support |
+| SVG | ✓ | ✓ | Sanitized vector processing |
+| HEIC / HEIF | ✓ | — | Decode only |
+| TIFF | ✓ | — | Decode only; partial variant support |
 
 **Conversion details**
 
@@ -126,17 +131,17 @@ PIXIORA does not need a server to process your images.
 
 The image-processing pipeline runs locally using WebAssembly codecs inside bounded Web Workers.
 
-| Privacy property   | Implementation        |
-| :----------------- | :-------------------- |
-| Image processing   | Browser-local         |
-| Image uploads      | None                  |
-| Processing backend | None                  |
-| Accounts           | Not required          |
-| API keys           | Not required          |
-| Analytics          | None                  |
-| Cookies            | None                  |
-| Image persistence  | None                  |
-| Preferences        | Local browser storage |
+| Privacy property | Implementation |
+|:--|:--|
+| Image processing | Browser-local |
+| Image uploads | None |
+| Processing backend | None |
+| Accounts | Not required |
+| API keys | Not required |
+| Analytics | None |
+| Cookies | None |
+| Image persistence | None |
+| Preferences | Local browser storage |
 
 Image bytes, filenames and generated results are not persisted. Reloading the application clears the current workspace.
 
@@ -156,37 +161,37 @@ The pipeline handles:
 
 ### Processing limits
 
-| Resource               |      Limit |
-| :--------------------- | ---------: |
-| Maximum file size      |     250 MB |
-| Maximum image pixels   |     150 MP |
-| Maximum dimension      |  16,384 px |
-| Compression quality    | 50 (fixed) |
-| Encoder effort         |  6 (fixed) |
-| Concurrent worker pool |    Up to 4 |
+| Resource | Limit |
+|:--|--:|
+| Maximum file size | 250 MB |
+| Maximum image pixels | 150 MP |
+| Maximum dimension | 16,384 px |
+| Compression quality | 50 (fixed) |
+| Encoder effort | 6 (fixed) |
+| Concurrent worker pool | Up to 4 |
 
 These are application limits, not performance guarantees. Actual processing speed depends on your browser, hardware, image and selected output format.
 
 ## Technology
 
-\<div align="center">
+<div align="center">
 
-\<img src="[https://skillicons.dev/icons?i=react,ts,vite,tailwind,nodejs](https://skillicons.dev/icons?i=react,ts,vite,tailwind,nodejs)" alt="PIXIORA technology stack"/>
+<img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,nodejs" alt="PIXIORA technology stack"/>
 
-\</div>
+</div>
 
-| Technology     | Purpose                           |
-| :------------- | :-------------------------------- |
-| React 19       | Interface                         |
-| TypeScript     | Application logic                 |
-| Vite           | Development and production builds |
-| Tailwind CSS 4 | Styling                           |
-| Zustand        | State management                  |
-| WebAssembly    | Image codecs                      |
-| Web Workers    | Background processing             |
-| Vitest         | Unit and component testing        |
-| Playwright     | Browser and end-to-end testing    |
-| axe-core       | Accessibility testing             |
+| Technology | Purpose |
+|:--|:--|
+| React 19 | Interface |
+| TypeScript | Application logic |
+| Vite | Development and production builds |
+| Tailwind CSS 4 | Styling |
+| Zustand | State management |
+| WebAssembly | Image codecs |
+| Web Workers | Background processing |
+| Vitest | Unit and component testing |
+| Playwright | Browser and end-to-end testing |
+| axe-core | Accessibility testing |
 
 ### Image processing codecs
 
@@ -235,17 +240,17 @@ No environment file, API key, database or backend server is required.
 
 ### Available commands
 
-| Command              | Description                        |
-| :------------------- | :--------------------------------- |
-| `npm run dev`        | Start development server           |
-| `npm run build`      | Build production application       |
-| `npm run preview`    | Preview production build           |
-| `npm run typecheck`  | Run TypeScript checks              |
-| `npm test`           | Run unit and component tests       |
-| `npm run test:watch` | Run tests in watch mode            |
-| `npm run test:e2e`   | Run browser tests                  |
-| `npm run test:a11y`  | Run accessibility tests            |
-| `npm run verify`     | Run complete verification pipeline |
+| Command | Description |
+|:--|:--|
+| `npm run dev` | Start development server |
+| `npm run build` | Build production application |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript checks |
+| `npm test` | Run unit and component tests |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:e2e` | Run browser tests |
+| `npm run test:a11y` | Run accessibility tests |
+| `npm run verify` | Run complete verification pipeline |
 
 ### Production build
 
@@ -279,11 +284,11 @@ pixiora/
 │   │   ├── core/
 │   │   ├── workers/
 │   │   └── optimization/
-│   ├── hooks/             # Application hooks
-│   ├── store/             # State management
-│   ├── styles/            # Design tokens and animations
-│   ├── utils/             # Shared utilities
-│   └── types/             # TypeScript definitions
+│   ├── hooks/            # Application hooks
+│   ├── store/            # State management
+│   ├── styles/           # Design tokens and animations
+│   ├── utils/            # Shared utilities
+│   └── types/            # TypeScript definitions
 │
 ├── scripts/
 ├── tests/
@@ -304,11 +309,11 @@ pixiora/
 
 PIXIORA includes automated tests for its processing engine, interface, browser workflows and accessibility.
 
-| Test suite             | Coverage                 |
-| :--------------------- | :----------------------- |
-| Unit & component tests | 77 tests                 |
-| Browser tests          | 27 tests                 |
-| Accessibility          | axe-core / WCAG 2.1 A/AA |
+| Test suite | Coverage |
+|:--|:--|
+| Unit & component tests | 77 tests |
+| Browser tests | 27 tests |
+| Accessibility | axe-core / WCAG 2.1 A/AA |
 
 Run the complete verification pipeline:
 
@@ -360,9 +365,9 @@ Found something interesting? Have an idea or spotted an issue?
 
 ---
 
-\<div align="center">
+<div align="center">
 
-\<img src="banner.png" width="180" alt="PIXIORA"/>
+<img src="banner.png" width="180" alt="PIXIORA"/>
 
 ### PIXIORA
 
@@ -370,6 +375,6 @@ Found something interesting? Have an idea or spotted an issue?
 
 **Designed & developed by [ar0x](https://github.com/ar0x1)**
 
-\<sub>Made for the web. Built around privacy.\</sub>
+<sub>Made for the web. Built around privacy.</sub>
 
-\</div>
+</div>
