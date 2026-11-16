@@ -78,6 +78,8 @@ PIXIORA supports a range of image formats, with conversion availability dependin
 
 </div>
 
+## Limitations
+
 | Technology | Purpose |
 |:--|:--|
 | React 19 | Interface |
