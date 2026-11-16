@@ -199,8 +199,8 @@ Found something interesting? Have an idea or spotted an issue?
 </p>
 
 <p> <align="center">
-  **OR**
-</align>
+  OR
+</align="centre">
 </p>
 
   - **Issues & feedback:** [GitHub Issues](https://github.com/ar0x1/pixiora/issues)
