@@ -204,55 +204,6 @@ pixiora/
 ├── vite.config.ts
 └── README.md
 ```
-
-## Quality & testing
-
-PIXIORA includes automated tests for its processing engine, interface, browser workflows and accessibility.
-
-| Test suite | Coverage |
-|:--|:--|
-| Unit & component tests | 77 tests |
-| Browser tests | 27 tests |
-| Accessibility | axe-core / WCAG 2.1 A/AA |
-
-Run the complete verification pipeline:
-
-```bash
-npm run verify
-```
-
-The verification pipeline runs type checking, unit tests, the production build and browser tests.
-
-## Current limitations
-
-PIXIORA is intentionally focused on compression and conversion rather than being a full image editor.
-
-- One image per workspace; no batch queue.
-- No image resizing interface or manual quality slider.
-- HEIC and TIFF are decode-only.
-- Animated WebP and AVIF are not preserved in exported animations.
-- GIF output currently has a known frame-timing limitation.
-- Some advanced TIFF and AVIF variants may not be supported.
-- AVIF encoding can take longer on larger images.
-
-These limitations are documented rather than hidden behind unsupported feature claims.
-
-## Design philosophy
-
-**Less interface. More intention.**
-
-PIXIORA follows a deliberate design language:
-
-- Minimal interface without dashboard clutter.
-- Graphite and charcoal surfaces.
-- Steel-blue accents.
-- Carefully balanced typography.
-- Clear visual hierarchy.
-- Subtle motion and restrained interaction.
-- Keyboard accessibility and reduced-motion support.
-
-Explore the [PIXIORA Design System](docs/design-system/README.md).
-
 ---
 
 ## Connect
