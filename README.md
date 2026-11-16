@@ -33,13 +33,11 @@
 
 ## The idea behind PIXIORA
 
-Images should be easy to optimize. Privacy shouldn't be a trade-off.
+**Optimize images. Keep them private.**
 
-**PIXIORA** is a browser-based image compressor and converter built around one principle: your files should never need to leave your device just to be optimized.
+**PIXIORA** is a simple, browser-based image compressor and converter. It processes your images directly on your device using WebAssembly and Web Workers.
 
-Powered by WebAssembly and Web Workers, PIXIORA brings image processing directly to your browser — without a processing backend, accounts, API keys, or image uploads.
-
-No unnecessary complexity. Just your image and the tools to optimize it.
+No uploads. No accounts. No backend. Just fast, private image optimization.
 
 ## Supported formats
 
