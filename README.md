@@ -80,9 +80,7 @@ Image bytes, filenames and generated results are not persisted. Reloading the ap
 
 ## Engine & performance
 
-PIXIORA is built with a dedicated processing pipeline rather than relying entirely on browser-native image export.
-
-The pipeline handles:
+**The pipeline handles**:
 
 1. **Validation** — checks image signatures, size limits and conversion compatibility.
 2. **Decoding** — reads the original image using available native or WebAssembly decoders.
@@ -100,8 +98,6 @@ The pipeline handles:
 | Compression quality | 50 (fixed) |
 | Encoder effort | 6 (fixed) |
 | Concurrent worker pool | Up to 4 |
-
-These are application limits, not performance guarantees. Actual processing speed depends on your browser, hardware, image and selected output format.
 
 ## Technology
 
@@ -167,35 +163,8 @@ Open your browser at:
 http://localhost:5173
 ```
 
-No environment file, API key, database or backend server is required.
+**No environment file, API key, database or backend server is require**.
 
-### Available commands
-
-| Command | Description |
-|:--|:--|
-| `npm run dev` | Start development server |
-| `npm run build` | Build production application |
-| `npm run preview` | Preview production build |
-| `npm run typecheck` | Run TypeScript checks |
-| `npm test` | Run unit and component tests |
-| `npm run test:watch` | Run tests in watch mode |
-| `npm run test:e2e` | Run browser tests |
-| `npm run test:a11y` | Run accessibility tests |
-| `npm run verify` | Run complete verification pipeline |
-
-### Production build
-
-```bash
-npm run build
-```
-
-The optimized application is generated inside:
-
-```text
-dist/
-```
-
-PIXIORA is designed for static hosting. It does not require a dedicated backend or database. Configure your host to serve the application routes through `index.html`.
 
 ## Project structure
 
