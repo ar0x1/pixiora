@@ -1,0 +1,282 @@
+/* ==========================================================================
+   PIXIORA — keyframes
+   Short, mechanical, purposeful. Nothing bounces, nothing floats in.
+   All motion is disabled by the global reduced-motion rule in globals.css.
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* A 1px sweep across the top edge of a working panel. Encodes "busy" without
+   pretending to know a percentage. */
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.sweep {
+  animation: sweep 1.3s ease-in-out infinite;
+}
+
+/* Indeterminate progress: a single moving segment, never a fake percentage. */
+@keyframes indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.indeterminate {
+  animation: indeterminate 1.15s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.025) 25%,
+    rgba(255, 255, 255, 0.06) 37%,
+    rgba(255, 255, 255, 0.025) 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Processing indicator (CompressionProgress)
+   Aesthetically animated but still honest: the ring is indeterminate while the
+   WASM codec works, and becomes a real arc only when an attempt ratio exists.
+   -------------------------------------------------------------------------- */
+
+/* Slow conic sweep around the phase ring. */
+@keyframes ringSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ring-spin {
+  animation: ringSpin 1.6s linear infinite;
+}
+
+/* Two counter-rotating aurora blobs give the panel depth without a heavy image. */
+@keyframes auroraDrift {
+  0% {
+    transform: translate3d(-8%, -4%, 0) scale(1.05);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate3d(8%, 6%, 0) scale(1.22);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(-8%, -4%, 0) scale(1.05);
+    opacity: 0.55;
+  }
+}
+
+.aurora-a {
+  animation: auroraDrift 7s ease-in-out infinite;
+}
+.aurora-b {
+  animation: auroraDrift 9.5s ease-in-out infinite reverse;
+}
+
+/* A hairline light that travels along the panel's top edge. */
+@keyframes edgeRun {
+  0% {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(140%);
+    opacity: 0;
+  }
+}
+
+.edge-run {
+  animation: edgeRun 2.1s ease-in-out infinite;
+}
+
+/* Phase tick: the active segment breathes instead of sitting flat. */
+@keyframes tickPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleX(0.82);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.tick-pulse {
+  animation: tickPulse 1.4s ease-in-out infinite;
+}
+
+/* Three-dot "working" rhythm, staggered by inline animation-delay. */
+@keyframes dotHop {
+  0%,
+  70%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  35% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+.dot-hop {
+  animation: dotHop 1.15s ease-in-out infinite;
+}
+
+
+/* ---------------------------------------------------------------------------
+   Processing panel — 2026 redesign
+   A single comet ring, a soft sweep and a set of instant-fill phase pills.
+   Nothing here invents a percentage; the ring is determinate only while a real
+   phase index exists, and it snaps to a complete arc the moment the job ends.
+   --------------------------------------------------------------------------- */
+
+/* Ring sweep used for the indeterminate state (one clean 90° comet). */
+@keyframes cometSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.comet-spin {
+  animation: cometSpin 1.05s linear infinite;
+}
+
+/* The finish flourish: the arc closes and brightens, then fades with the panel. */
+@keyframes arcClose {
+  0% {
+    opacity: 0.9;
+    filter: brightness(1);
+  }
+  40% {
+    opacity: 1;
+    filter: brightness(1.8);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+}
+.arc-close {
+  animation: arcClose 260ms ease-out both;
+}
+
+/* Cells that appear one after another as each real phase lands. */
+@keyframes pillIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.pill-in {
+  animation: pillIn 220ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+/* Panel entry: rises 6px and settles — one movement, not a wobble. */
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.panel-in {
+  animation: panelIn 260ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+/* A slow sheen that travels across the panel once, reinforcing activity. */
+@keyframes sheen {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+.sheen {
+  animation: sheen 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}

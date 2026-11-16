@@ -1,0 +1,321 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   PIXIORA — design tokens
+
+   Palette: graphite instrument planes (dark, very slightly green-shifted),
+   one cool teal accent. Teal reads as "precision tool"; it also keeps the
+   primary action clearly distinct from the semantic ok (mint) / warn / danger.
+   Typography + spacing + card language: borrowed from the ToolSort design
+   system — expressive serif display for headings, DM Sans for interface text,
+   roomier padding, 9px card radii, soft surface-only shadows.
+
+   Fonts are self-hosted from /public/fonts so the app stays 100% offline:
+   no Google Fonts request, no FOUT from a network fetch.
+   ========================================================================== */
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/dm-sans-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/dm-sans-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-serif-display-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-serif-display-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-serif-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-serif-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@theme {
+  /* Planes, darkest → lightest. Each step is a real elevation level. */
+  --color-void: #08090c;
+  --color-base: #0b0d12;
+  --color-surface: #0f1218;
+  --color-raised: #141820;
+  --color-elevated: #1a1f29;
+  --color-line: rgba(255, 255, 255, 0.07);
+  --color-line-strong: rgba(255, 255, 255, 0.13);
+
+  /* Accent: a single steel blue. Restraint is the point.
+     strong = primary button surface (white text clears AA at ~5.6:1),
+     accent = rings / slider / active rule, soft = focus + arcs. */
+  --color-accent: #5b9cf8;
+  --color-accent-soft: #9dc0ff;
+  --color-accent-strong: #1f5bd4;
+
+  /* Text ramp — every value verified for WCAG AA on the darkest surface. */
+  --color-ink: #ececf1;
+  --color-ink-dim: #b3b3bd;
+  --color-ink-muted: #8b8b96;
+
+  --color-ok: #4ade80;
+  --color-warn: #e0a13c;
+  --color-danger: #f2576b;
+
+  /* Interface text: DM Sans, self-hosted. System stack is the fallback only. */
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  /* Display headings: the one expressive voice in the UI (ToolSort's DM Serif Display). */
+  --font-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+
+  /* Radii: slightly rounded, never harsh — the ToolSort shape language
+     (9px cards, 7px controls) mapped onto a dense tool UI. */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+
+  /* Shadows: pressed-in planes; the soft lift is reserved for hover/overlays,
+     exactly as the reference system does — depth is mostly borders. */
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -16px rgba(0, 0, 0, 0.8);
+  --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.45), 0 16px 36px -22px rgba(0, 0, 0, 0.9);
+  --shadow-lift: 0 12px 32px -18px rgba(0, 0, 0, 0.9);
+  --shadow-pop: 0 40px 90px -40px rgba(0, 0, 0, 1), 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+:root {
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.005em;
+}
+
+/* A single, barely-there wash. Reads as material, not as "gradient". */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(90rem 40rem at 50% -30%, rgba(91, 156, 248, 0.075), transparent 70%),
+    radial-gradient(60rem 30rem at 110% 110%, rgba(255, 255, 255, 0.022), transparent 70%);
+}
+
+::selection {
+  background: rgba(91, 156, 248, 0.32);
+  color: #fff;
+}
+
+/* Scrollbars: thin, square, unobtrusive. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.14) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.13);
+  border: 3px solid transparent;
+  border-radius: 0;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+  background-clip: content-box;
+}
+
+/* --------------------------------------------------------------------------
+   Focus: always visible, never removed (a11y requirement)
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-accent-soft);
+  outline-offset: 1px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Surfaces
+   -------------------------------------------------------------------------- */
+
+/* The base card: one hairline, flat plane, 10px radius, a single soft shadow.
+   Mirrors the reference system's `.tool-card` — depth comes from the border,
+   the shadow only separates the plane from the background. */
+@utility panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Panel header strip, used by every rail and viewer. */
+@utility panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0 0.875rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* Inset well for controls and readouts. */
+@utility well {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+@utility hairline {
+  border: 1px solid var(--color-line);
+}
+
+/* Section eyebrow: small, uppercase, tracked out. */
+@utility eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+/* Display heading: the expressive serif voice, used for page titles and the
+   empty-state headline only. Interface text stays DM Sans. */
+@utility display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  color: var(--color-ink);
+}
+
+/* Section heading — serif, one step down from a page title. */
+@utility display-sm {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+/* Empty-canvas texture: a barely-there dot grid, so a large drop target reads
+   as a working surface instead of a void. 2% alpha — texture, not pattern. */
+@utility dotgrid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: center;
+}
+
+/* Checkerboard behind transparent images. */
+@utility checkerboard {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.035) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.035) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  background-color: #0a0c11;
+}
+
+/* Numeric readouts must never jitter. */
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Keyboard hint chip. */
+@utility kbd {
+  display: inline-flex;
+  align-items: center;
+  height: 1.125rem;
+  min-width: 1.125rem;
+  justify-content: center;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  line-height: 1;
+  color: var(--color-ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Motion: reduced-motion is honoured globally, not per-component.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* In-app override (Settings → Reduce motion), same guarantee as the OS setting. */
+html[data-reduced-motion='true'] *,
+html[data-reduced-motion='true'] *::before,
+html[data-reduced-motion='true'] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
