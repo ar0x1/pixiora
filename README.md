@@ -194,7 +194,7 @@ Found something interesting? Have an idea or spotted an issue?
 
 <p> 
   <a href="mailto:killtoneizuku@gmail.com">
-    <img src="https://raw.githubusercontent.com/gauravghongde/social-icons/9d939e1c5b7ea4a24ac39c3e4631970c0aa1b920/SVG/Color/Gmail.svg" alt="Gmail" width="40" height="40" />
+     - Mail To: <img src="https://raw.githubusercontent.com/gauravghongde/social-icons/9d939e1c5b7ea4a24ac39c3e4631970c0aa1b920/SVG/Color/Gmail.svg" alt="Gmail" width="40" height="40" />
   </a>
 </p>
 
