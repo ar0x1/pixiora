@@ -47,20 +47,7 @@ PIXIORA supports a range of image formats, with conversion availability dependin
 
 <img src="format.png" width="100%" alt="PIXIORA — by ar0x"/>
 
-**Conversion details**
-
-- SVG can remain SVG or be rasterized to supported image formats.
-- HEIC and TIFF can be converted to supported raster formats.
-- Animated WebP and AVIF are not preserved as animations in exported files.
-- Conversions that cannot be performed are disabled with an explanation.
-
-The in-app Documentation page contains the conversion compatibility matrix.
-
 ## Built around privacy
-
-PIXIORA does not need a server to process your images.
-
-The image-processing pipeline runs locally using WebAssembly codecs inside bounded Web Workers.
 
 | Privacy property | Implementation |
 |:--|:--|
@@ -73,10 +60,6 @@ The image-processing pipeline runs locally using WebAssembly codecs inside bound
 | Cookies | None |
 | Image persistence | None |
 | Preferences | Local browser storage |
-
-Image bytes, filenames and generated results are not persisted. Reloading the application clears the current workspace.
-
-**Your images are processed on your device, not uploaded to a remote image-processing service.**
 
 ## Engine & performance
 
