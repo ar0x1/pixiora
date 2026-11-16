@@ -61,18 +61,6 @@ PIXIORA supports a range of image formats, with conversion availability dependin
 | Image persistence | None |
 | Preferences | Local browser storage |
 
-## Engine & performance
-
-**The pipeline handles**:
-
-1. **Validation** — checks image signatures, size limits and conversion compatibility.
-2. **Decoding** — reads the original image using available native or WebAssembly decoders.
-3. **Processing** — runs the appropriate image codec inside a worker.
-4. **Verification** — checks the generated output before making it available for download.
-5. **Delivery** — provides the resulting file directly to your browser.
-
-### Processing limits
-
 | Resource | Limit |
 |:--|--:|
 | Maximum file size | 250 MB |
