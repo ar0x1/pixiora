@@ -4,11 +4,9 @@
 
 <br/>
 
-### A better way to handle images.
+### A better way to optimize images.
 
 **Compress. Convert. Compare.**
-
-A privacy-first image optimization studio that works entirely in your browser.
 
 <br/>
 
