@@ -26,7 +26,6 @@
 
 <br/>
 
-*Built with precision. Designed for simplicity.*
 
 </div>
 
@@ -41,63 +40,6 @@ Images should be easy to optimize. Privacy shouldn't be a trade-off.
 Powered by WebAssembly and Web Workers, PIXIORA brings image processing directly to your browser — without a processing backend, accounts, API keys, or image uploads.
 
 No unnecessary complexity. Just your image and the tools to optimize it.
-
-## What makes it different
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 01 — Compression
-
-Reduce image file sizes while retaining useful visual quality.
-
-- Smart compression
-- Before / after comparison
-- Real size and savings statistics
-- Output verification
-
-</td>
-<td width="50%" valign="top">
-
-### 02 — Conversion
-
-Move between supported image formats with clear capability handling.
-
-- Multiple input formats
-- Format-aware conversion
-- Conversion compatibility matrix
-- Warnings for capability changes
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 03 — Visual comparison
-
-See exactly what changed after compression.
-
-- Interactive comparison slider
-- Original and compressed views
-- Mouse and touch interaction
-- Keyboard accessibility
-
-</td>
-<td width="50%" valign="top">
-
-### 04 — Privacy by design
-
-Your images stay in your browser throughout processing.
-
-- Local WebAssembly processing
-- Bounded background workers
-- No image uploads
-- No image storage or analytics
-
-</td>
-</tr>
-</table>
 
 ## Supported formats
 
