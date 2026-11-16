@@ -267,14 +267,13 @@ Found something interesting? Have an idea or spotted an issue?
 
 <div align="center">
 
-<img src="banner.png" width="180" alt="PIXIORA"/>
+<img src="icon.png" width="180" alt="PIXIORA"/>
 
 ### PIXIORA
 
-*Explore. Create. Imagine.*
 
 **Designed & developed by [ar0x](https://github.com/ar0x1)**
 
-<sub>Made for the web. Built around privacy.</sub>
+<sub>Do Not Compliment.</sub>
 
 </div>
