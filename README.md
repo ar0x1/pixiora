@@ -105,7 +105,7 @@ Your images stay in your browser throughout processing.
 
 PIXIORA supports a range of image formats, with conversion availability depending on the source, destination and browser capabilities.
 
-<img src="banner.png" width="100%" alt="PIXIORA — by ar0x"/>
+<img src="format.png" width="100%" alt="PIXIORA — by ar0x"/>
 
 **Conversion details**
 
