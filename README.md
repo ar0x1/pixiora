@@ -205,7 +205,6 @@ pixiora/
 └── README.md
 ```
 ---
-
 ## Connect
 
 Found something interesting? Have an idea or spotted an issue?
