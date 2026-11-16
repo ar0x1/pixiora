@@ -61,6 +61,8 @@ PIXIORA supports a range of image formats, with conversion availability dependin
 | Image persistence | None |
 | Preferences | Local browser storage |
 
+## Limitations
+
 | Resource | Limit |
 |:--|--:|
 | Maximum file size | 250 MB |
@@ -77,8 +79,6 @@ PIXIORA supports a range of image formats, with conversion availability dependin
 <img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,nodejs" alt="PIXIORA technology stack"/>
 
 </div>
-
-## Limitations
 
 | Technology | Purpose |
 |:--|:--|
